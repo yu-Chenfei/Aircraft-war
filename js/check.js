@@ -14,6 +14,16 @@ let bombDiv = document.getElementById("bomb");
 let bombMax = 3; // 最多拥有炸弹数量
 let bombNum = 0; // 现有炸弹数量
 
+let freshCheck = () => {
+	doubleTimer = null;
+	dt = 8;
+	cowedTimer = null;
+	ct = 8;
+	score = 0;
+	bombNum = 0;
+	bombDiv.innerHTML = "";
+}
+
 // 在外调用
 let check = () => {
 	let es = enemyDiv.children;

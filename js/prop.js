@@ -2,7 +2,12 @@
 
 let propDiv = document.getElementById("prop");
 
-let propNum = 500; // 奖励的概率参数
+let propNum = 1000; // 奖励的概率参数
+
+let freshProp = () => {
+	propDiv.innerHTML = "";
+	propNum = 1000;
+}
 
 // 奖励的运动
 let propMove = () => {

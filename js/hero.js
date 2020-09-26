@@ -2,7 +2,6 @@
 // 获取hero
 let hero = document.getElementById("hero");
 
-
 // 设置hero的位置
 let setHeroPosition = () => {
 	setPosition(hero,{

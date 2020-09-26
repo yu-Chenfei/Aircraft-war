@@ -7,6 +7,15 @@ let isCowed = false; // 是否密集
 let space = 7; // 子弹间隔
 let spaceCount = 0; // 子弹间隔计时参数
 
+// 刷新数据
+let freshBullet = () => {
+	isDouble = false;
+	isCowed = false;
+	space = 7;
+	spaceCount = 0;
+	buttleDiv.innerHTML = "";
+}
+
 // 子弹的运动 外部调用
 let buttleMove = () => {
 	// 1.完成子弹的创建

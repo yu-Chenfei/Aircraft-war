@@ -4,6 +4,12 @@ let enemyDiv = document.getElementById("enemy");
 // 游戏难度参考值
 let diff = 200;
 
+// 刷新数据
+let freshEnemy = () => {
+	enemyDiv.innerHTML = "";
+	diff = 200;
+}
+
 // 敌机的运动 在外调用 30ms调用一次
 let enemyMove = () => {
 	// 1.完成敌机的创建
