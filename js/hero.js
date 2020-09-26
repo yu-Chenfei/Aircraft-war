@@ -75,8 +75,33 @@ window.onkeyup = function(event){ // 抬起
 		case 40:
 			isBottom = false;
 			break;
+		case 32:
+			// 空格 发起炸弹
+			clearAllEnemy();
+			break;
 		default:
 			break;
+	}
+}
+
+// 炸弹技能
+let clearAllEnemy = () => {
+	// 先判断是否有炸弹
+	if(bombDiv.children.length == 0){
+		return;
+	}
+
+	// 1.底部删除一枚炸弹
+	document.getElementById("bomb").removeChild(bombDiv.children[0]);
+	bombNum--;
+	// 2.清除屏幕的enemy
+	// enemyDiv.innerHTML = "";
+	let es = enemyDiv.children;
+	for(let i = 0;i < es.length;i++){
+		es[i].isDel = true;
+		// 计算得分
+		score += es[i].score;
+		document.getElementById("score").innerHTML = `得分：${score}`;
 	}
 }
 
@@ -133,6 +158,8 @@ hero.ontouchstart = function(event){
 				top: starY + touch2.clientY - ty
 			});
 		}
+	}else if(event.touches.length == 2){
+		clearAllEnemy();
 	}
 }
 

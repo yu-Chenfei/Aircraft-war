@@ -30,6 +30,7 @@ let enemyMove = () => {
 // el:元素
 // 大敌机
 let setBigEnemy = el => {
+	el.score = 6;
 	el.style.width = "110px";
 	el.style.height = "164px";
 	el.style.backgroundImage = "url(./img/enemy3.png)";
@@ -46,6 +47,7 @@ let setBigEnemy = el => {
 
 // 中敌机
 let setEnemy = el => {
+	el.score = 3;
 	el.style.width = "46px";
 	el.style.height = "64px";
 	el.style.backgroundImage = "url(./img/enemy2.png)";
@@ -62,6 +64,7 @@ let setEnemy = el => {
 
 // 小敌机
 let setSmallEnemy = el => {
+	el.score = 1;
 	el.style.width = "38px";
 	el.style.height = "34px";
 	el.style.backgroundImage = "url(./img/enemy1.png)";
